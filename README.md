@@ -9,4 +9,5 @@ This is a minimal reproduction of a bug in Next.js where the `revalidate` option
 3. Make a request to `http://abc.localhost:3000/`. Observe the `Cache-Control` header.
 
 **Expected**: `s-maxage=3600, stale-while-revalidate=31532400`
+
 **Actual**: `private, no-cache, no-store, max-age=0, must-revalidate`
